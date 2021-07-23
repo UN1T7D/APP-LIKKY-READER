@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lukky_Reader.MainPage"
+             xmlns:sh="clr-namespace:Sharpnado.Shades;assembly=Sharpnado.Shadows"
+             NavigationPage.HasNavigationBar="False">
+            <!--xmlns:zxing="clr-namespace:ZXing.Client.Result;assembly=zxing.portable"-->
+    <ScrollView HeightRequest="900" >
+
+
+        <StackLayout>
+            <StackLayout.Background>
+                <LinearGradientBrush>
+                    <GradientStopCollection>
+                        <GradientStop Color="#0B0719" Offset="0"/>
+                        <GradientStop Color="#433089" Offset="1"/>
+                        <!--161616-->
+                        <!--30343f-->
+                    </GradientStopCollection>
+                </LinearGradientBrush>
+            </StackLayout.Background>
+
+            <StackLayout HeightRequest="900"  WidthRequest="300" Margin="0,0,0,0">
+                <StackLayout WidthRequest="50"  HorizontalOptions="End" VerticalOptions="Start"  Margin="0,10,10,0">
+                    <ImageButton Source="signout.png"  BackgroundColor="#240B3B" Padding="10"  CornerRadius="50" Clicked="CerrarSession_Clicked"/>
+                </StackLayout>
+                <Grid RowSpacing="0" ColumnSpacing="0" Margin="0,0,0,10">
+                   
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="160"></RowDefinition>
+                        <RowDefinition Height="100"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="270"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="190"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <StackLayout Grid.Row="0" Margin="0,0,0,0">
+                        <Label x:Name="lblId" FontSize="20" Margin="0,-10,0,0" HorizontalTextAlignment="Center" TextColor="#fff"  FontFamily="{StaticResource Allerrg}"/>
+                        <Image Source="logolukkybg2.png"  HorizontalOptions="Center" WidthRequest="180" VerticalOptions="Center" />
+                    </StackLayout>
+                    <StackLayout  Grid.Row="1" Margin="0,0,0,0">
+                        <Label Grid.Row="1" Text="Escanea el código QR de la placa de la mascota" HorizontalTextAlignment="Center" Margin="90,20,90,20" HorizontalOptions="Center" VerticalOptions="Center" TextColor="#fff"   FontSize="26" FontAttributes="Bold" FontFamily="{StaticResource Allerbd}"/>
+                    </StackLayout>
+                    <StackLayout  Grid.Row="2" Margin="0,0,0,0" >
+                        <Label Text="•  •  •  •  •  •  •  •  •  •  •  •  •  •  •  •"  FontFamily="{StaticResource Allerbd}" TextColor="#433089" HorizontalTextAlignment="Center" FontSize="28" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    </StackLayout>
+                    <StackLayout  Grid.Row="3" Margin="0,0,0,0" >
+                        <!--<Frame HeightRequest="150" Background="#FAFAFA" CornerRadius="20"/>-->
+                        <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Margin="0,10,0,0"> 
+                            <sh:Shadows x:Name="shaAlert" CornerRadius="30" Shades="{sh:SingleShade Offset='0,0', Opacity=0.6, Color=white, BlurRadius=20}">
+                                <ImageButton Padding="50" HeightRequest="200" Source="Vector.png" WidthRequest="200"  BackgroundColor="#FFFFFF" CornerRadius="30" Clicked="ScannerQR_Clicked"/>
+                            </sh:Shadows>
+                        </StackLayout>
+                        <Label Text="Escanear una nueva placa" TextColor="#fafafa" FontSize="20" HorizontalTextAlignment="Center"  FontFamily="{StaticResource Allerrg}" />
+                    </StackLayout>
+                    <StackLayout  Grid.Row="4" Margin="0,0,0,0">
+                        <Label Text="•  •  •  •  •  •  •  •  •  •  •  •  •  •  •  •"  FontFamily="{StaticResource Allerbd}" TextColor="#433089" HorizontalTextAlignment="Center" FontSize="28" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    </StackLayout>
+                    <StackLayout   Grid.Row="5"  Margin="0,0,0,0" Padding="30,5,30,0"    VerticalOptions="End" HorizontalOptions="Center" WidthRequest="320" >
+                        <Label x:Name="lblmensaje" Text="Mascotas encontradas:"  FontFamily="{StaticResource Allerbd}" TextColor="#fafafa" FontSize="24" HorizontalTextAlignment="Center" Margin="0,5,0,0"/>
+                            <ListView x:Name="listaEscaneos" HasUnevenRows="True" IsRefreshing="{Binding IsBusy, Mode=OneWay}" RefreshCommand="{Binding RefreshCommand}" ItemSelected="listaEscaneos_ItemSelected" RefreshControlColor="#ffbe00">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell Height="70">
+                                            <sh:Shadows  CornerRadius="30" Shades="{sh:SingleShade Offset='0,0', Opacity=0.4, Color=black, BlurRadius=20}">
+                                                <Frame HeightRequest="20" Margin="0,10,0,10" BackgroundColor="#433089" CornerRadius="20" Padding="5, 8, 5, 0">
+                                                    <StackLayout>
+                                                        <Grid RowSpacing="0" ColumnSpacing="0">
+                                                            <Grid.RowDefinitions>
+                                                                <RowDefinition></RowDefinition>
+                                                            </Grid.RowDefinitions>
+                                                            <Grid.ColumnDefinitions>
+                                                                <ColumnDefinition Width="50"></ColumnDefinition>
+                                                                <ColumnDefinition Width="230"></ColumnDefinition>
+                                                                <ColumnDefinition Width="50"></ColumnDefinition>
+                                                            </Grid.ColumnDefinitions>
+
+                                                            <!--<StackLayout Grid.Column="0" HeightRequest="30" Padding="5">
+                                                                <Label Text="Url: " TextColor="#FAB81C" FontSize="12"  FontFamily="{StaticResource Allerrg}"/>
+                                                            </StackLayout>-->
+                                                            <StackLayout Grid.Column="0" Background="#240B3B"  HeightRequest="60" VerticalOptions="Start"  Padding="0" Margin="-10,-10,0,0">
+                                                                <Label Text="Url: " TextColor="#FAB81C" FontSize="18"  FontFamily="{StaticResource Allerrg}" HorizontalTextAlignment="Center" Margin="0,15,0,0"/>
+                                                            </StackLayout>
+                                                            <StackLayout Grid.Column="1"  HeightRequest="60"  Padding="0" Margin="0,-10,0,0">
+                                                            <Label Text="{Binding Url}" TextColor="#fff" FontSize="16" FontFamily="{StaticResource Allerrg}"  HorizontalTextAlignment="Start" Margin="5,15,0,0"/>
+                                                            </StackLayout>
+                                                            <StackLayout Grid.Column="2" Background="#FAB81C"  HeightRequest="60" VerticalOptions="Start"  Padding="0" Margin="-10,-10,0,0">
+                                                                <Image Source="qrimage.png" WidthRequest="20" Margin="-15,10,0,0"/>
+                                                            </StackLayout>
+                                                    </Grid>
+                                                    </StackLayout>
+                                                </Frame>
+                                            </sh:Shadows>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                    </StackLayout>
+                </Grid>
+
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+
+
+</ContentPage>

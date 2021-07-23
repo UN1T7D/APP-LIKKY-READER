@@ -1,0 +1,20 @@
+C:\Users\ahora\source\repos\Lukky Reader\Lukky Reader\Lukky Reader\bin\Debug\netstandard2.0\Lukky Reader.deps.json
+C:\Users\ahora\source\repos\Lukky Reader\Lukky Reader\Lukky Reader\bin\Debug\netstandard2.0\Lukky Reader.dll
+C:\Users\ahora\source\repos\Lukky Reader\Lukky Reader\Lukky Reader\bin\Debug\netstandard2.0\ref\Lukky Reader.dll
+C:\Users\ahora\source\repos\Lukky Reader\Lukky Reader\Lukky Reader\bin\Debug\netstandard2.0\Lukky Reader.pdb
+C:\Users\ahora\source\repos\Lukky Reader\Lukky Reader\Lukky Reader\obj\Debug\netstandard2.0\Lukky Reader.csproj.AssemblyReference.cache
+C:\Users\ahora\source\repos\Lukky Reader\Lukky Reader\Lukky Reader\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\ahora\source\repos\Lukky Reader\Lukky Reader\Lukky Reader\obj\Debug\netstandard2.0\Login.xaml.g.cs
+C:\Users\ahora\source\repos\Lukky Reader\Lukky Reader\Lukky Reader\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\ahora\source\repos\Lukky Reader\Lukky Reader\Lukky Reader\obj\Debug\netstandard2.0\MasterPage.xaml.g.cs
+C:\Users\ahora\source\repos\Lukky Reader\Lukky Reader\Lukky Reader\obj\Debug\netstandard2.0\Views\AgregarUsuario.xaml.g.cs
+C:\Users\ahora\source\repos\Lukky Reader\Lukky Reader\Lukky Reader\obj\Debug\netstandard2.0\Views\configuraciones.xaml.g.cs
+C:\Users\ahora\source\repos\Lukky Reader\Lukky Reader\Lukky Reader\obj\Debug\netstandard2.0\Views\Descripcion.xaml.g.cs
+C:\Users\ahora\source\repos\Lukky Reader\Lukky Reader\Lukky Reader\obj\Debug\netstandard2.0\Views\IniciarSesion.xaml.g.cs
+C:\Users\ahora\source\repos\Lukky Reader\Lukky Reader\Lukky Reader\obj\Debug\netstandard2.0\Lukky Reader.AssemblyInfoInputs.cache
+C:\Users\ahora\source\repos\Lukky Reader\Lukky Reader\Lukky Reader\obj\Debug\netstandard2.0\Lukky Reader.AssemblyInfo.cs
+C:\Users\ahora\source\repos\Lukky Reader\Lukky Reader\Lukky Reader\obj\Debug\netstandard2.0\Lukky Reader.csproj.CoreCompileInputs.cache
+C:\Users\ahora\source\repos\Lukky Reader\Lukky Reader\Lukky Reader\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\ahora\source\repos\Lukky Reader\Lukky Reader\Lukky Reader\obj\Debug\netstandard2.0\Lukky Reader.dll
+C:\Users\ahora\source\repos\Lukky Reader\Lukky Reader\Lukky Reader\obj\Debug\netstandard2.0\ref\Lukky Reader.dll
+C:\Users\ahora\source\repos\Lukky Reader\Lukky Reader\Lukky Reader\obj\Debug\netstandard2.0\Lukky Reader.pdb

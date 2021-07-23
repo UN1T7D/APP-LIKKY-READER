@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lukky_Reader.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:Key="Allerrg" x:TypeArguments="x:String">
+                <On Platform="Android" Value="allerrg.ttf#allerrg"/>
+            </OnPlatform>
+            
+            <OnPlatform x:Key="Allerbd" x:TypeArguments="x:String">
+                <On Platform="Android" Value="allerbd.ttf#allerbd"/>
+            </OnPlatform>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

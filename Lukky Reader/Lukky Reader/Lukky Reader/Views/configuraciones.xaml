@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lukky_Reader.Views.configuraciones"
+              xmlns:sh="clr-namespace:Sharpnado.Shades;assembly=Sharpnado.Shadows"
+             NavigationPage.HasNavigationBar="False">
+    <!--xmlns:zxing="clr-namespace:ZXing.Client.Result;assembly=zxing.portable"-->
+    <ScrollView HeightRequest="850" >
+
+
+        <StackLayout>
+            <StackLayout.Background>
+                <LinearGradientBrush>
+                    <GradientStopCollection>
+                        <GradientStop Color="#0B0719" Offset="0"/>
+                        <GradientStop Color="#433089" Offset="1"/>
+                        <!--161616-->
+                        <!--30343f-->
+                    </GradientStopCollection>
+                </LinearGradientBrush>
+            </StackLayout.Background>
+
+            <StackLayout HeightRequest="850"  WidthRequest="300" Margin="0,0,0,0">
+                <StackLayout WidthRequest="50"  HorizontalOptions="Start" VerticalOptions="Start"  Margin="10,20,0,0">
+                    <ImageButton Source="leftarrow.png"  BackgroundColor="#240B3B" Padding="10"  CornerRadius="50" Clicked="GoingBack_Clicked"/>
+                </StackLayout>
+                <Grid RowSpacing="0" ColumnSpacing="0" Margin="0,0,0,0">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="160"></RowDefinition>
+                        <RowDefinition Height="70"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="430"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="190"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <StackLayout Grid.Row="0" Margin="0,0,0,0" Padding="20">
+                        <Image Source="logolukkybg2.png"  HorizontalOptions="Center" WidthRequest="180" VerticalOptions="Center" />
+                    </StackLayout>
+                    <StackLayout  Grid.Row="1" Margin="0,0,0,0">
+                        <Label Text="Ingresa a la plataforma de " TextColor="#FAB81C" FontSize="25" FontAttributes="Bold" HorizontalOptions="Center" FontFamily="{StaticResource Allerrg}"/>
+                        <Label Text="Lukky Pets" TextColor="#FAB81C" FontSize="35" FontAttributes="Bold" HorizontalOptions="Center" FontFamily="{StaticResource Allerbd}"/>
+                    </StackLayout>
+                    <!--<StackLayout  Grid.Row="2" Margin="0,0,0,0" >
+                        <Label Text="•  •  •  •  •  •  •  •  •  •  •  •  •  •  •  •"  FontFamily="{StaticResource Allerbd}" TextColor="#433089" HorizontalTextAlignment="Center" FontSize="28" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    </StackLayout>-->
+                    <StackLayout  Grid.Row="3" Margin="0,0,0,0"  >
+                        <!--<Frame HeightRequest="150" Background="#FAFAFA" CornerRadius="20"/>-->
+                        <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Margin="0,10,0,0">
+                            <Image Source="qrimage.png" Opacity="0.1" WidthRequest="200"/>
+                        </StackLayout>
+                        <Grid Margin="0,-360,0,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                        </Grid>
+                        <StackLayout>
+                            <ListView x:Name="UsuarioLista">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                            <StackLayout>
+                                                <StackLayout Grid.Row="0" WidthRequest="350" Padding="0, 10, 0,0" VerticalOptions="Center" HorizontalOptions="Center">
+                                                    <Label Text="Nombre del usuario" TextColor="#fff" FontSize="20" FontAttributes="Bold" HorizontalOptions="Start" Margin="0,0,0,10" FontFamily="{StaticResource Allerrg}"/>
+                                                    <sh:Shadows CornerRadius="30" Shades="{sh:SingleShade Offset='5,5', Opacity=0.4, Color=black, BlurRadius=30}">
+                                                        <!--<Button Text="crear cuenta" Padding="10" Background="#FAB81C" TextColor="#fff" CornerRadius="30" FontSize="25" FontAttributes="Bold" FontFamily="{StaticResource Allerbd}"/>-->
+                                                        <Frame WidthRequest="350" HorizontalOptions="Start" CornerRadius="30" BackgroundColor="#147FAD" HeightRequest="15" />
+                                                    </sh:Shadows>
+                                                    <Entry  Placeholder="ejemplo@gmail.com" FontFamily="{StaticResource Allerrg}"  FontSize="20"  PlaceholderColor="#D8D8D8" WidthRequest="300" TextColor="#FFFFFF" HorizontalOptions="Start"  Background="#147FAD" Margin="30,-55,0,0" IsReadOnly="True"/>
+                                                </StackLayout>
+                                                <StackLayout Grid.Row="1" WidthRequest="350" Padding="0, 30, 0,0" VerticalOptions="Center" HorizontalOptions="Center">
+                                                    <Label Text="Correo del usuario" TextColor="#fff" FontSize="20" FontAttributes="Bold" HorizontalOptions="Start" Margin="0,0,0,10" FontFamily="{StaticResource Allerrg}"/>
+                                                    <sh:Shadows CornerRadius="30" Shades="{sh:SingleShade Offset='5,5', Opacity=0.4, Color=black, BlurRadius=30}">
+                                                        <!--<Button Text="crear cuenta" Padding="10" Background="#FAB81C" TextColor="#fff" CornerRadius="30" FontSize="25" FontAttributes="Bold" FontFamily="{StaticResource Allerbd}"/>-->
+                                                        <Frame WidthRequest="350" HorizontalOptions="Start" CornerRadius="30" BackgroundColor="#147FAD" HeightRequest="15"/>
+                                                    </sh:Shadows>
+                                                    <Entry   Placeholder="ejemplo@gmail.com" FontFamily="{StaticResource Allerrg}"  FontSize="20"  PlaceholderColor="#D8D8D8" WidthRequest="300" TextColor="#FFFFFF" HorizontalOptions="Start"  Background="#147FAD" Margin="30,-55,0,0" IsReadOnly="True"/>
+                                                </StackLayout>
+                                                <StackLayout Grid.Row="2" WidthRequest="350" Padding="0, 30, 0,0" VerticalOptions="Center" HorizontalOptions="Center">
+                                                    <Label Text="Contraseña" TextColor="#fff" FontSize="20" FontAttributes="Bold" HorizontalOptions="Start" Margin="0,0,0,10" FontFamily="{StaticResource Allerrg}"/>
+                                                    <sh:Shadows CornerRadius="30" Shades="{sh:SingleShade Offset='5,5', Opacity=0.4, Color=black, BlurRadius=30}">
+                                                        <!--<Button Text="crear cuenta" Padding="10" Background="#FAB81C" TextColor="#fff" CornerRadius="30" FontSize="25" FontAttributes="Bold" FontFamily="{StaticResource Allerbd}"/>-->
+                                                        <Frame WidthRequest="350" HorizontalOptions="Start" CornerRadius="30" BackgroundColor="#147FAD" HeightRequest="15"/>
+                                                    </sh:Shadows>
+                                                    <Entry   Placeholder="ejemplo@gmail.com" FontFamily="{StaticResource Allerrg}"  FontSize="20"  PlaceholderColor="#D8D8D8" WidthRequest="300" TextColor="#FFFFFF" HorizontalOptions="Start"  Background="#147FAD" Margin="30,-55,0,0" IsReadOnly="True"/>
+                                                </StackLayout>
+                                                <StackLayout Grid.Row="3" WidthRequest="350" Padding="0, 30, 0,0" VerticalOptions="Center" HorizontalOptions="Center">
+                                                    <sh:Shadows CornerRadius="30" Shades="{sh:SingleShade Offset='5,5', Opacity=0.4, Color=black, BlurRadius=30}">
+                                                        <!--<Button Text="crear cuenta" Padding="10" Background="#FAB81C" TextColor="#fff" CornerRadius="30" FontSize="25" FontAttributes="Bold" FontFamily="{StaticResource Allerbd}"/>-->
+                                                        <Button WidthRequest="350" HorizontalOptions="Start" Text="cerrar sesion" TextColor="#fff" FontSize="28" CornerRadius="30" FontFamily="{StaticResource Allerbd}" BackgroundColor="#FAB81C" HeightRequest="55"/>
+                                                    </sh:Shadows>
+                                                </StackLayout>
+                                            </StackLayout>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </StackLayout>
+                    </StackLayout>
+                    <!--<StackLayout  Grid.Row="4" Margin="0,0,0,0">
+                        <Label Text="•  •  •  •  •  •  •  •  •  •  •  •  •  •  •  •"  FontFamily="{StaticResource Allerbd}" TextColor="#433089" HorizontalTextAlignment="Center" FontSize="28" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    </StackLayout>-->
+                    <!--<StackLayout   Grid.Row="5"  Margin="0,0,0,0" Padding="30,5,30,0"    VerticalOptions="End" HorizontalOptions="Center" WidthRequest="320" >
+                        <Label x:Name="lblmensaje" Text="Mascotas encontradas:"  FontFamily="{StaticResource Allerbd}" TextColor="#fafafa" FontSize="24" HorizontalTextAlignment="Center" Margin="0,5,0,0"/>
+                        
+                    </StackLayout>-->
+                </Grid>
+
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+
+
+</ContentPage>
